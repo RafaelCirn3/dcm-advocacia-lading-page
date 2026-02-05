@@ -44,8 +44,9 @@ app.post('/api/contact', async (req, res) => {
     });
 
     await transporter.sendMail({
-      from: process.env.MAIL_FROM || process.env.SMTP_USER,
+      from: process.env.SMTP_USER,
       to: process.env.MAIL_TO,
+      replyTo: email,
       subject: 'Contato do site - DCM Advocacia',
       text: `Nome: ${name}\nEmail: ${email}\nTelefone: ${phone}\nMensagem: ${message}`
     });
