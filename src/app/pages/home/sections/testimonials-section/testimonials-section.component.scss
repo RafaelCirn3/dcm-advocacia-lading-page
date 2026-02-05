@@ -1,0 +1,23 @@
+.testimonials {
+  background: #f8f9fb;
+}
+
+.testimonials-grid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.testimonial-card {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.testimonial-card strong {
+  color: var(--dcm-blue);
+}
+
+@media (min-width: 900px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

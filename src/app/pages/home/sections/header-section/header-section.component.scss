@@ -1,0 +1,120 @@
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--header-bg);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--header-border);
+  z-index: 1000;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4.75rem;
+  gap: var(--space-4);
+}
+
+.logo {
+  color: var(--header-text);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.logo span {
+  color: var(--dcm-gold);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  color: var(--header-text);
+  font-weight: 500;
+}
+
+.theme-toggle {
+  padding: 0.7rem 1.2rem;
+  border-color: color-mix(in srgb, var(--dcm-gold) 55%, transparent);
+  color: var(--dcm-gold);
+}
+
+.theme-toggle:hover {
+  border-color: var(--dcm-green);
+  color: var(--dcm-green);
+}
+
+.nav a:not(.btn) {
+  position: relative;
+  padding: 0.3rem 0;
+  transition: color 0.2s ease;
+}
+
+.nav a:not(.btn)::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.25rem;
+  height: 2px;
+  width: 0;
+  background: var(--dcm-green);
+  transition: width 0.2s ease;
+}
+
+.nav a:not(.btn):hover {
+  color: var(--dcm-gold);
+}
+
+.nav a:not(.btn):hover::after {
+  width: 100%;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 0.35rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 1.6rem;
+  height: 2px;
+  background: var(--header-text);
+  border-radius: 999px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav {
+    position: absolute;
+    top: 4.75rem;
+    left: 0;
+    right: 0;
+    background: var(--header-bg);
+    flex-direction: column;
+    gap: var(--space-4);
+    padding: var(--space-5) var(--space-4) var(--space-6);
+    transform: translateY(-120%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+
+  .nav.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+}

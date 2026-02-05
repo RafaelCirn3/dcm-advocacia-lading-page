@@ -1,0 +1,65 @@
+<section id="contato" class="section contact">
+  <div class="container">
+    <app-section-title
+      eyebrow="Entre em contato"
+      title="Vamos conversar sobre sua demanda"
+      subtitle="Formulario simples e canais de atendimento complementares."
+    ></app-section-title>
+
+    <div class="contact-grid">
+      <form class="contact-form" (submit)="onSubmit($event)">
+        <label for="name">Nome</label>
+        <input id="name" name="name" type="text" placeholder="Seu nome" required />
+
+        <label for="email">Email</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="seuemail@exemplo.com"
+          required
+        />
+
+        <label for="phone">Telefone</label>
+        <input
+          id="phone"
+          name="phone"
+          type="tel"
+          placeholder="(00) 00000-0000"
+          required
+        />
+
+        <label for="message">Mensagem</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          placeholder="Descreva sua necessidade"
+          required
+        ></textarea>
+
+        <button class="btn btn-gold" type="submit" aria-label="Enviar mensagem">
+          Enviar
+        </button>
+        <p class="form-success" *ngIf="submitted()" role="status">
+          Mensagem enviada com sucesso.
+        </p>
+      </form>
+
+      <div class="contact-cards">
+        <article class="card">
+          <h3>Endereco</h3>
+          <p>Rua Placeholder, 000 - Cidade/UF</p>
+        </article>
+        <article class="card">
+          <h3>Telefone</h3>
+          <p>(00) 0000-0000</p>
+        </article>
+        <article class="card">
+          <h3>Email</h3>
+          <p>contato@dcmadvocacia.com</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>

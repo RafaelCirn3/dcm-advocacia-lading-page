@@ -1,0 +1,25 @@
+.differentials {
+  background: #ffffff;
+}
+
+.differentials-grid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.differential-card h3 {
+  margin: 0 0 var(--space-2);
+  color: var(--dcm-blue);
+}
+
+@media (min-width: 720px) {
+  .differentials-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .differentials-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

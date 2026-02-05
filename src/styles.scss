@@ -1,1 +1,208 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+	--dcm-blue: #192a44;
+	--dcm-slate: #556175;
+	--dcm-gray: #a4a6a8;
+	--dcm-gold: #b79b56;
+	--dcm-green: #324f40;
+	--bg-light: #f6f7f8;
+	--bg-paper: #ffffff;
+	--space-1: 0.25rem;
+	--space-2: 0.5rem;
+	--space-3: 0.75rem;
+	--space-4: 1rem;
+	--space-5: 1.5rem;
+	--space-6: 2rem;
+	--space-7: 3rem;
+	--space-8: 4.5rem;
+	--radius-sm: 0.65rem;
+	--radius-md: 1rem;
+	--radius-lg: 1.5rem;
+	--shadow-sm: 0 8px 24px rgba(25, 42, 68, 0.08);
+	--shadow-md: 0 18px 40px rgba(25, 42, 68, 0.12);
+	--container: 1180px;
+	--header-bg: rgba(25, 42, 68, 0.96);
+	--header-text: #e9edf5;
+	--header-border: color-mix(in srgb, var(--dcm-gray) 25%, transparent);
+}
+
+body.theme-2 {
+	--dcm-blue: #9c9485;
+	--dcm-slate: #b2ada0;
+	--dcm-gray: #c5c0b5;
+	--dcm-gold: #977e52;
+	--dcm-green: #977e52;
+	--bg-light: #f9f7f1;
+	--bg-paper: #f3ebd9;
+	--shadow-sm: 0 8px 24px rgba(80, 72, 56, 0.12);
+	--shadow-md: 0 18px 40px rgba(80, 72, 56, 0.18);
+	--header-bg: color-mix(in srgb, #f3ebd9 92%, #ffffff);
+	--header-text: #5b5346;
+	--header-border: color-mix(in srgb, #c5c0b5 45%, transparent);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	color: var(--dcm-slate);
+	background: linear-gradient(180deg, var(--bg-light), #ffffff 45%, #f8f9fb 100%);
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+button,
+input,
+textarea {
+	font-family: inherit;
+}
+
+:focus-visible {
+	outline: 3px solid color-mix(in srgb, var(--dcm-gold) 70%, #ffffff);
+	outline-offset: 2px;
+}
+
+.container {
+	width: min(100% - 2rem, var(--container));
+	margin: 0 auto;
+}
+
+.section {
+	padding: var(--space-8) 0;
+}
+
+.section-title {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-2);
+	margin-bottom: var(--space-6);
+}
+
+.section-title .eyebrow {
+	font-size: 0.85rem;
+	text-transform: uppercase;
+	letter-spacing: 0.18rem;
+	color: var(--dcm-green);
+	font-weight: 600;
+}
+
+.section-title h2 {
+	margin: 0;
+	font-size: clamp(1.8rem, 1.2rem + 2vw, 2.6rem);
+	color: var(--dcm-blue);
+	letter-spacing: -0.02em;
+}
+
+.section-title p {
+	margin: 0;
+	max-width: 46rem;
+	color: var(--dcm-slate);
+}
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	padding: 0.85rem 1.5rem;
+	border-radius: 999px;
+	border: 1px solid transparent;
+	font-weight: 600;
+	font-size: 0.95rem;
+	transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease,
+		color 0.2s ease, border-color 0.2s ease;
+	cursor: pointer;
+}
+
+.btn:active {
+	transform: translateY(1px);
+}
+
+.btn-primary {
+	background: var(--dcm-blue);
+	color: #ffffff;
+	box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+	background: #121f34;
+}
+
+.btn-gold {
+	background: color-mix(in srgb, var(--dcm-gold) 80%, #ffffff);
+	color: #2a2418;
+	border-color: color-mix(in srgb, var(--dcm-green) 30%, transparent);
+}
+
+.btn-gold:hover {
+	background: var(--dcm-gold);
+	color: #201b12;
+}
+
+.btn-outline {
+	background: transparent;
+	color: color-mix(in srgb, var(--dcm-blue) 85%, #000000);
+	border-color: color-mix(in srgb, var(--dcm-blue) 25%, transparent);
+}
+
+.btn-outline:hover {
+	border-color: var(--dcm-green);
+	color: color-mix(in srgb, var(--dcm-green) 85%, #000000);
+}
+
+.card {
+	background: var(--bg-paper);
+	border: 1px solid color-mix(in srgb, var(--dcm-gray) 40%, transparent);
+	border-radius: var(--radius-md);
+	padding: var(--space-5);
+	box-shadow: var(--shadow-sm);
+	transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+	transform: translateY(-4px);
+	box-shadow: var(--shadow-md);
+	border-color: color-mix(in srgb, var(--dcm-green) 35%, transparent);
+}
+
+.badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	padding: 0.4rem 0.8rem;
+	border-radius: 999px;
+	background: color-mix(in srgb, var(--dcm-green) 15%, transparent);
+	color: var(--dcm-green);
+	font-size: 0.8rem;
+	font-weight: 600;
+}
+
+.text-gold {
+	color: var(--dcm-gold);
+}
+
+.muted {
+	color: color-mix(in srgb, var(--dcm-slate) 80%, #ffffff);
+}
+
+.divider-line {
+	height: 1px;
+	width: 100%;
+	background: color-mix(in srgb, var(--dcm-gray) 35%, transparent);
+}
