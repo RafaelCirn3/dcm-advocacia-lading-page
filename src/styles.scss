@@ -1,11 +1,11 @@
 :root {
-	--dcm-blue: #192a44;
-	--dcm-slate: #556175;
-	--dcm-gray: #a4a6a8;
-	--dcm-gold: #b79b56;
-	--dcm-green: #324f40;
-	--bg-light: #f6f7f8;
-	--bg-paper: #ffffff;
+	--dcm-blue: #0a3447;
+	--dcm-slate: #183a4a;
+	--dcm-gray: #e6ebe8;
+	--dcm-gold: #d5ae6d;
+	--dcm-green: #183a4a;
+	--bg-light: #f2f2f2;
+	--bg-paper: #e6ebe8;
 	--space-1: 0.25rem;
 	--space-2: 0.5rem;
 	--space-3: 0.75rem;
@@ -17,28 +17,14 @@
 	--radius-sm: 0.65rem;
 	--radius-md: 1rem;
 	--radius-lg: 1.5rem;
-	--shadow-sm: 0 8px 24px rgba(25, 42, 68, 0.08);
-	--shadow-md: 0 18px 40px rgba(25, 42, 68, 0.12);
+	--shadow-sm: 0 8px 24px rgba(10, 52, 71, 0.12);
+	--shadow-md: 0 18px 40px rgba(10, 52, 71, 0.18);
 	--container: 1180px;
-	--header-bg: rgba(25, 42, 68, 0.96);
-	--header-text: #e9edf5;
-	--header-border: color-mix(in srgb, var(--dcm-gray) 25%, transparent);
+	--header-bg: color-mix(in srgb, #0a3447 92%, #000000);
+	--header-text: #f2f2f2;
+	--header-border: color-mix(in srgb, #d5ae6d 35%, transparent);
 }
 
-body.theme-2 {
-	--dcm-blue: #9c9485;
-	--dcm-slate: #b2ada0;
-	--dcm-gray: #c5c0b5;
-	--dcm-gold: #977e52;
-	--dcm-green: #977e52;
-	--bg-light: #f9f7f1;
-	--bg-paper: #f3ebd9;
-	--shadow-sm: 0 8px 24px rgba(80, 72, 56, 0.12);
-	--shadow-md: 0 18px 40px rgba(80, 72, 56, 0.18);
-	--header-bg: color-mix(in srgb, #f3ebd9 92%, #ffffff);
-	--header-text: #5b5346;
-	--header-border: color-mix(in srgb, #c5c0b5 45%, transparent);
-}
 
 *,
 *::before,

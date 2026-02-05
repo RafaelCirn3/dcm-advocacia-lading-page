@@ -40,16 +40,6 @@
   font-weight: 500;
 }
 
-.theme-toggle {
-  padding: 0.7rem 1.2rem;
-  border-color: color-mix(in srgb, var(--dcm-gold) 55%, transparent);
-  color: var(--dcm-gold);
-}
-
-.theme-toggle:hover {
-  border-color: var(--dcm-green);
-  color: var(--dcm-green);
-}
 
 .nav a:not(.btn) {
   position: relative;

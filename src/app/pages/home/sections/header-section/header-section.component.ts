@@ -8,7 +8,6 @@ import { Component, signal } from '@angular/core';
 })
 export class HeaderSectionComponent {
   menuOpen = signal(false);
-  themeTwo = signal(false);
 
   toggleMenu(): void {
     this.menuOpen.update((value) => !value);
@@ -16,10 +15,5 @@ export class HeaderSectionComponent {
 
   closeMenu(): void {
     this.menuOpen.set(false);
-  }
-
-  toggleTheme(): void {
-    this.themeTwo.update((value) => !value);
-    document.body.classList.toggle('theme-2', this.themeTwo());
   }
 }
