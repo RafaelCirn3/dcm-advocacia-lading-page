@@ -44,6 +44,12 @@
   font-weight: 600;
 }
 
+.form-error {
+  margin: 0;
+  color: #b13a3a;
+  font-weight: 600;
+}
+
 .contact-cards {
   display: grid;
   gap: var(--space-4);

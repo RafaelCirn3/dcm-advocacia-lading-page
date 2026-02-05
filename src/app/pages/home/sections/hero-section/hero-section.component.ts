@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CONTACT_LINKS } from '../../../../shared/contact-links';
 
 @Component({
   selector: 'app-hero-section',
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './hero-section.component.html',
   styleUrl: './hero-section.component.scss'
 })
-export class HeroSectionComponent {}
+export class HeroSectionComponent {
+  whatsappLink = CONTACT_LINKS.whatsapp;
+}
