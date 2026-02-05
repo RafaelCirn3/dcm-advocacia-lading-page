@@ -25,11 +25,12 @@
   font-size: 1rem;
 }
 
-.logo span {
-  color: var(--dcm-gold);
-  font-weight: 600;
-  letter-spacing: 0.05em;
+.logo img {
+  height: 2.1rem;
+  width: auto;
+  display: block;
 }
+
 
 .nav {
   display: flex;
